@@ -1,0 +1,21 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+  security: # 如果不设置这段内容，账号默认是user，密码就是一个随机值，该值会在启动的时候打印出来
+    basic:
+      enabled: true # 开启基于HTTP basic的认证
+    user: # 配置登录的账号密码
+      name: user
+      password: 1234
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWith-eureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
