@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.springcloud.finchley</groupId>
-    <artifactId>eureka-client</artifactId>
+    <artifactId>ribbon</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>eureka-client</name>
-    <description>spring cloud eureka 客户端</description>
+    <name>ribbon</name>
+    <description>spring cloud 负载均衡器 ribbon 学习</description>
 
     <parent>
         <groupId>com.springcloud.finchley</groupId>
@@ -18,6 +18,11 @@
     </parent>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -33,12 +38,9 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-        </dependency>
     </dependencies>
+
+
 
 
 </project>

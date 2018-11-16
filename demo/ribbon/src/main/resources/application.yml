@@ -1,10 +1,9 @@
 server:
-  port: 8772
+  port: 8781
 
 spring:
   application:
-    name: eureka-client
-
+    name: ribbon
 eureka:
   client:
     serviceUrl:

@@ -13,6 +13,7 @@
     <modules>
         <module>eureka-server</module> <!-- 服务注册中心 server -->
         <module>eureka-client</module> <!-- 服务提供者 client -->
+        <module>ribbon</module> <!-- 负载均衡器 ribbon -->
     </modules>
 
     <parent>
