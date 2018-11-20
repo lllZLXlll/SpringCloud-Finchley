@@ -1,0 +1,15 @@
+server:
+  port: 8791
+
+spring:
+  application:
+    name: feign
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:1234@localhost:8761/eureka/
+
+# 在D版本的Spring Cloud之后，没有默认打开断路器，需要手动设置打开
+feign:
+  hystrix:
+    enabled: true

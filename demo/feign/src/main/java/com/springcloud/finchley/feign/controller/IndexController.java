@@ -1,6 +1,6 @@
-package com.springcloud.finchley.ribbon.controller;
+package com.springcloud.finchley.feign.controller;
 
-import com.springcloud.finchley.ribbon.service.IndexService;
+import com.springcloud.finchley.feign.service.IndexService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,12 +14,6 @@ public class IndexController {
     @GetMapping("/index")
     public String index() {
         return indexService.index();
-    }
-
-    // 断路器
-    @GetMapping("/hystrix")
-    public String hystrix() throws Exception {
-        return indexService.hystrix();
     }
 
 }
