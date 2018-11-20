@@ -1,0 +1,20 @@
+server:
+  port: 8801
+
+spring:
+  application:
+    name: zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:1234@localhost:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/** # 此路径下的所有请求，转发到ribbon服务
+      serviceId: ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: feign

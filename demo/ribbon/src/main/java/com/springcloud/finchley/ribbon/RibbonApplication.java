@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 public class RibbonApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RibbonApplication.class, args);
+        SpringApplication.run(com.springcloud.finchley.ribbon.RibbonApplication.class, args);
     }
 
     @Bean
