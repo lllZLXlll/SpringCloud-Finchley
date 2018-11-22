@@ -17,6 +17,8 @@
         <module>ribbon</module> <!-- 负载均衡器 ribbon -->
         <module>feign</module> <!-- 声明式的伪Http客户端 feign -->
         <module>service-zuul</module> <!-- 智能路由 zuul -->
+        <module>config-server</module> <!-- 配置中心 server -->
+        <module>config-client</module> <!-- 配置中心 client -->
     </modules>
 
     <parent>
